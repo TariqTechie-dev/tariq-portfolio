@@ -1,5 +1,3 @@
-
-
 /* ============================
    Assets Images
 ============================ */
@@ -8,6 +6,8 @@ const uomImage = "/assets/images/education/uom.png";
 const gdcgImage = "/assets/images/education/GDCG.png";
 const matricImage = "/assets/images/education/GHSSP.png";
 const luxeScentImage = "/assets/images/projects/luxe-scent.png";
+const wanderlustImage = "/assets/images/projects/wanderlust.png";
+const apnaCollegeLogo = "/assets/images/certifications/apna-college.png";
 
 /* =========================================================
    1. BIO SECTION
@@ -41,32 +41,102 @@ export const skills = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "JavaScript" },
-      { name: "React.js" },
-      { name: "Tailwind CSS" },
+      {
+        name: "HTML",
+        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+      },
+      {
+        name: "CSS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+      },
+      {
+        name: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      },
+      {
+        name: "bootstrap",
+        image:
+          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+      },
+      {
+        name: "React.js",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      },
     ],
   },
 
   {
     title: "Backend",
-    skills: [{ name: "Node.js" }, { name: "Express.js" }, { name: "EJS" }],
+    skills: [
+      {
+        name: "Node.js",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      },
+      {
+        name: "Express.js",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+      },
+      {
+        name: "EJS",
+        image:
+          "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/ejs/default.svg",
+      },
+    ],
   },
 
   {
     title: "Database",
-    skills: [{ name: "MongoDB" }, { name: "SQL" }],
+    skills: [
+      {
+        name: "MongoDB",
+        image:
+          "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mongodb.png",
+      },
+      {
+        name: "SQL",
+        image:
+          "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
+      },
+    ],
   },
 
   {
     title: "Tools",
     skills: [
-      { name: "Git" },
-      { name: "GitHub" },
-      { name: "Postman" },
-      { name: "Vercel" },
-      { name: "Netlify" },
+      {
+        name: "Git",
+        image:
+          "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png",
+      },
+      {
+        name: "GitHub",
+        image:
+          "https://img.icons8.com/?size=100&id=CexFs1lac6J7&format=png&color=000000",
+      },
+      {
+        name: "Postman",
+        image:
+          "https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/postman.png",
+      },
+      {
+        name: "Vercel",
+        image: "https://www.svgrepo.com/show/327408/logo-vercel.svg",
+      },
+      {
+        name: "Netlify",
+        image:
+          "https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg",
+      },
     ],
   },
 ];
@@ -111,7 +181,7 @@ export const education = [
 export const projects = [
   {
     id: 1,
-    title: "Luxe Scent",
+    title: "Luxe Scents",
     date: "2025 - 2026",
     description:
       "Luxe Scents is a full-stack web-based perfume e-commerce platform built with Node.js, Express.js, MongoDB, Mongoose, and EJS. The platform allows customers to browse perfumes, manage their cart and wishlist, place orders, and submit product reviews. It also provides an admin dashboard for managing products, orders, customers, and analytics.",
@@ -131,5 +201,45 @@ export const projects = [
     github: "https://github.com/TariqTechie-dev/luxe-scents",
     webapp: "https://luxe-scents.onrender.com",
   },
-  
+
+  {
+    id: 2,
+    title: "WanderLust",
+    date: "2025 - 2025",
+    description:
+      "A full-stack Airbnb-style travel listing platform with authentication, reviews, image uploads, and MongoDB session storage.",
+    image: wanderlustImage,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "EJS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+    ],
+    category: "web app",
+    github: "https://github.com/TariqTechie-dev/WanderLust",
+    webapp: "https://wanderlust-1iua.onrender.com/",
+  },
+];
+
+/* =========================================================
+   5. CERTIFICATIONS SECTION
+========================================================= */
+
+export const certifications = [
+  {
+    id: 1,
+    title: "Fullstack Web Development",
+    organization: "Apna College",
+    logo: apnaCollegeLogo,
+    date: "Issued Jan 2025",
+    description:
+      "Comprehensive full-stack web development program covering MERN stack, modern JavaScript, and industry best practices for building scalable web applications.",
+    pdfUrl:
+      "https://drive.google.com/file/d/1u1E26Hpcyt0HkKt2atXFDw8YBi9_t4AK/view?usp=sharing",
+  },
 ];
