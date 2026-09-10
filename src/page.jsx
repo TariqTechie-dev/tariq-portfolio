@@ -1,10 +1,16 @@
-import React from "react";
+import Navbar from "./components/layout/Navbar";
 
 const Page = () => {
   return (
-    <div>
-      <h1>Tariq Hussain Portfolio</h1>
-    </div>
+    <>
+      <Navbar />
+
+      <main>
+        <section id="home">
+          <h1>Tariq Hussain Portfolio</h1>
+        </section>
+      </main>
+    </>
   );
 };
 
