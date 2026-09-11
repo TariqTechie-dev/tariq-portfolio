@@ -218,7 +218,7 @@ export const projects = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Mongoose",
+      
     ],
     category: "web app",
     github: "https://github.com/TariqTechie-dev/WanderLust",
