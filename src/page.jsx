@@ -1,4 +1,7 @@
 import Navbar from "./components/layout/Navbar";
+import Hero from "./components/sections/Hero";
+import Skills from "./components/sections/Skills";
+
 
 const Page = () => {
   return (
@@ -7,7 +10,8 @@ const Page = () => {
 
       <main>
         <section id="home">
-          <h1>Tariq Hussain Portfolio</h1>
+          <Hero />
+            <Skills />
         </section>
       </main>
     </>
