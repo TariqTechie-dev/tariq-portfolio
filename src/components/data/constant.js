@@ -4,11 +4,10 @@
 
 const uomImage = "/assets/images/education/uom.png";
 const gdcgImage = "/assets/images/education/GDCG.png";
-const matricImage = "/assets/images/education/GHSSP.png";
+const ghsspImage = "/assets/images/education/GHSSP.png";
 const luxeScentImage = "/assets/images/projects/luxe-scent.png";
 const wanderlustImage = "/assets/images/projects/wanderlust.png";
 const apnaCollegeLogo = "/assets/images/certifications/apna-college.png";
-
 /* =========================================================
    1. BIO SECTION
 ========================================================= */
@@ -165,7 +164,7 @@ export const education = [
   },
   {
     id: 3,
-    img: matricImage,
+    img: ghsspImage,
     school: "GHSS Pingal Dir Lower",
     date: "Apr 2019 - Apr 2020",
     grade: "75%",
@@ -218,7 +217,6 @@ export const projects = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      
     ],
     category: "web app",
     github: "https://github.com/TariqTechie-dev/WanderLust",

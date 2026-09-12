@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo */}
         <a
           href="#home"
-          className="text-2xl font-bold"
+          className="text-4xl md:text-5xl font-signature"
         >
           Tariq<span className="text-cyan-400">.</span>
         </a>
