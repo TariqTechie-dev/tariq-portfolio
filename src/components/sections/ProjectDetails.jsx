@@ -1,5 +1,37 @@
+import { useEffect } from "react";
+
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+
+  const handleCloseModal = () => {
+    setOpenModal({
+      state: false,
+      project: null,
+    });
+  };
+
+  useEffect(() => {
+    if (!openModal?.state) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setOpenModal({
+          state: false,
+          project: null,
+        });
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [openModal?.state, setOpenModal]);
 
   if (!openModal?.state || !project) {
     return null;
@@ -17,28 +49,24 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
     }
   };
 
-  const handleCloseModal = () => {
-    setOpenModal({
-      state: false,
-      project: null,
-    });
-  };
-
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-details-title"
       onClick={handleCloseModal}
       className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/70 px-3 py-8 sm:px-5"
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className="relative my-5 w-full max-w-[800px] rounded-2xl bg-slate-900 p-5 text-gray-200 shadow-2xl sm:p-7"
+        className="relative my-5 w-full max-w-[800px] rounded-2xl border border-slate-800 bg-slate-900 p-5 text-slate-400 shadow-2xl sm:p-7"
       >
         {/* Close Button */}
         <button
           type="button"
           onClick={handleCloseModal}
           aria-label="Close project details"
-          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-xl text-gray-300 transition hover:bg-cyan-400 hover:text-slate-950"
+          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-xl text-slate-400 transition hover:bg-cyan-400 hover:text-slate-950"
         >
           ×
         </button>
@@ -51,13 +79,16 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
         />
 
         {/* Project Title */}
-        <h2 className="mt-5 text-2xl font-semibold text-white sm:text-3xl">
+        <h2
+          id="project-details-title"
+          className="mt-5 text-2xl font-semibold text-slate-50 sm:text-3xl"
+        >
           {project.title}
         </h2>
 
         {/* Project Date */}
         {project.date && (
-          <p className="mt-1 text-sm text-gray-400">
+          <p className="mt-1 text-sm text-slate-500 dark:text-gray-400">
             {project.date}
           </p>
         )}
@@ -67,7 +98,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           {project.tags?.map((tag, index) => (
             <span
               key={index}
-              className="rounded-lg bg-slate-800 px-3 py-1 text-xs text-cyan-400 sm:text-sm"
+              className="rounded-lg bg-cyan-400/10 px-3 py-1 text-xs text-cyan-400 sm:text-sm"
             >
               {tag}
             </span>
@@ -75,7 +106,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
         </div>
 
         {/* Project Description */}
-        <p className="text-sm leading-7 text-gray-300 sm:text-base">
+        <p className="text-sm leading-7 text-slate-600 dark:text-gray-300 sm:text-base">
           {project.description}
         </p>
 
@@ -85,7 +116,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             type="button"
             onClick={handleViewCode}
             disabled={!project.github}
-            className="w-full rounded-lg bg-slate-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
+            className="w-full rounded-lg bg-slate-100 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-slate-700 dark:text-white dark:hover:bg-slate-600 sm:w-auto"
           >
             View Code
           </button>
@@ -94,7 +125,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             type="button"
             onClick={handleViewLiveApp}
             disabled={!project.webapp}
-            className="w-full rounded-lg bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
+            className="w-full rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
           >
             View Live App
           </button>

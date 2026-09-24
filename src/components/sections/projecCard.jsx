@@ -16,13 +16,13 @@ const ProjectCard = ({ project, setOpenModal }) => {
           project: project,
         })
       }
-      className="group h-[490px] w-[330px] cursor-pointer overflow-hidden rounded-[10px] bg-slate-900 px-5 py-[26px] shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-2 hover:brightness-110 hover:shadow-2xl"
+      className="group h-[490px] w-full max-w-[330px] cursor-pointer overflow-hidden rounded-[10px] border border-slate-800 bg-slate-900 px-5 py-[26px] shadow-lg shadow-black/20 transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-400/10"
     >
       {/* Project Image */}
       <img
         src={project.image}
         alt={project.title}
-        className="h-[180px] w-full rounded-[10px] bg-white object-cover shadow-md"
+        className="h-[180px] w-full rounded-[10px] bg-slate-950 object-cover shadow-md"
       />
 
       {/* Project Tags */}
@@ -30,7 +30,7 @@ const ProjectCard = ({ project, setOpenModal }) => {
         {project.tags?.map((tag, index) => (
           <span
             key={index}
-            className="rounded-[10px] bg-slate-800 px-2 py-[2px] text-xs font-normal text-cyan-400"
+            className="rounded-[10px] bg-cyan-400/10 px-2 py-[2px] text-xs font-normal text-cyan-400"
           >
             {tag}
           </span>
@@ -39,15 +39,15 @@ const ProjectCard = ({ project, setOpenModal }) => {
 
       {/* Project Details */}
       <div className="flex w-full flex-col gap-0 p-[2px]">
-        <h2 className="overflow-hidden text-2xl font-semibold text-gray-200">
+        <h2 className="overflow-hidden text-2xl font-semibold text-slate-50">
           {project.title}
         </h2>
 
-        <div className="ml-[2px] text-xs font-normal text-gray-400 md:text-sm">
+        <div className="ml-[2px] text-xs font-normal text-slate-400 md:text-sm">
           {project.date}
         </div>
 
-        <p className="mt-2 line-clamp-4 w-full overflow-hidden text-sm font-normal leading-6 text-gray-400">
+        <p className="mt-2 line-clamp-4 w-full overflow-hidden text-sm font-normal leading-6 text-slate-400">
           {project.description}
         </p>
       </div>

@@ -5,36 +5,40 @@ const Hero = () => {
   return (
     <section
       id="about"
-      className="relative flex min-h-[calc(100vh-80px)] w-full items-center justify-center overflow-hidden bg-slate-950 px-6 py-8 lg:px-12"
+      className="relative flex min-h-[calc(100vh-80px)] w-full items-center justify-center overflow-hidden bg-slate-950 px-5 py-10 text-slate-50 transition-colors duration-300 sm:px-6 lg:px-16 lg:py-16 xl:px-20"
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-8 text-center lg:flex-row-reverse lg:gap-12 lg:text-left">
-        
-        {/* Profile Image (No Cutoff) */}
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-8 text-center lg:flex-row-reverse lg:gap-16 lg:text-left xl:gap-20">
+
+        {/* Profile Image Container */}
         <div className="flex shrink-0 items-center justify-center">
           <img
-            src="/assets/images/profile.jpeg"
+            src="/assets/images/profile3.jpeg"
             alt={Bio.name || "Tariq Hussain"}
-            className="h-[280px] w-[280px] rounded-full object-cover object-center ring-2 ring-cyan-400/50 sm:h-[350px] sm:w-[350px] lg:h-[350px] lg:w-[350px] shadow-2xl"
+            className="h-56 w-56 rounded-full object-cover object-center shadow-2xl ring-2 ring-cyan-400/80 sm:h-[350px] sm:w-[350px] lg:h-[410px] lg:w-[410px] xl:h-[450px] xl:w-[450px]"
           />
         </div>
 
-        {/* Text Area  */}
-        <div className="flex max-w-lg flex-col items-center lg:items-start lg:mx-10 sm:max-2">
-          
+        {/* Text Content Container */}
+        <div className="mx-auto flex max-w-xl flex-col items-center sm:max-w-2xl lg:mx-0 lg:max-w-2xl lg:items-start">
+
           {/* Small Top Greeting */}
-          <span className="mb-1 text-xl font-medium text-gray-300 sm:text-2xl">
+          <span className="mb-1 text-xl font-bold text-slate-400 sm:text-2xl">
             Hi, I am
           </span>
 
           {/* Big Bold Name */}
-          <h1 className="mb-3 text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-6xl">
-            <span className="bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent">
-              {Bio.name}
+          <h1 className="mb-3 text-4xl font-black tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
+            <span className="block bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent sm:inline">
+              Tariq
+            </span>
+            <span className="hidden sm:inline"> </span>
+            <span className="block bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent sm:inline">
+              Hussain
             </span>
           </h1>
 
-          {/* Typewriter */}
-          <div className="mb-4 flex min-h-[32px] flex-wrap items-center justify-center gap-2 text-lg font-medium text-gray-200 sm:text-xl lg:justify-start lg:text-2xl">
+          {/* Typewriter Component Container */}
+          <div className="mb-4 flex min-h-[32px] flex-wrap items-center justify-center gap-2 text-lg font-medium text-slate-400 sm:text-xl lg:justify-start lg:text-2xl">
             <span>I am a</span>
             <span className="font-semibold text-cyan-400">
               <Typewriter
@@ -49,26 +53,26 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Description Paragraph (Controlled Width) */}
-          <p className="mb-6 text-sm font-normal leading-relaxed text-gray-400 sm:text-base">
+          {/* Short Bio */}
+          <p className="mb-8 text-center text-slate-400 text-[16px] font-light leading-relaxed sm:text-xl lg:text-left lg:text-lg lg:leading-8">
             {Bio.description}
           </p>
 
-          {/* Resume Buttons */}
-          <div className="flex flex-row items-center justify-center gap-3 sm:gap-4">
+          {/* Resume Action Buttons */}
+          <div className="flex w-full max-w-sm flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:justify-start">
             <a
               href={Bio.resume || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-cyan-500 px-5 py-2.5 text-xs font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition-all hover:bg-cyan-400 sm:px-6 sm:py-3 sm:text-sm"
+              className="w-full rounded-lg bg-cyan-400 px-8 py-4 text-center text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-400/20 transition-all hover:bg-cyan-300 sm:w-auto sm:px-6 lg:w-48"
             >
               Check Resume
             </a>
 
             <a
-              href={Bio.resume || "#"}
-              download
-              className="rounded-lg border border-cyan-400/60 px-5 py-2.5 text-xs font-semibold text-cyan-400 transition-all hover:bg-cyan-400/10 sm:px-6 sm:py-3 sm:text-sm"
+              href={Bio.resumeDownload || Bio.resume || "#"}
+              download="Tariq-Hussain-Resume.pdf"
+              className="w-full rounded-lg border border-cyan-400/60 px-8 py-4 text-center text-sm font-semibold text-cyan-400 transition-all hover:bg-cyan-400/10 hover:text-cyan-300 sm:w-auto sm:px-6 lg:w-48"
             >
               Download Resume
             </a>
