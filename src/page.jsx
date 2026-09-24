@@ -1,5 +1,3 @@
-import React from "react";
-
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
@@ -16,32 +14,33 @@ const Page = () => {
   return (
     <>
       <Navbar />
+      <div className="h-20 w-full" aria-hidden="true" />
 
-      <div className="w-full bg-slate-950">
+      <div className="w-full bg-slate-950 text-slate-50 transition-colors duration-300">
         <section id="home">
           <Hero />
         </section>
 
         <Wrapper>
-          <section id="skills">
+          <section>
             <Skills />
           </section>
         </Wrapper>
 
-        <section id="projects">
+        <section>
           <Projects />
         </section>
 
         <Wrapper>
-          <section id="education">
+          <section>
             <Education />
           </section>
 
-          <section id="certifications">
+          <section>
             <Certifications />
           </section>
 
-          <section id="contact">
+          <section>
             <Contact />
           </section>
         </Wrapper>
