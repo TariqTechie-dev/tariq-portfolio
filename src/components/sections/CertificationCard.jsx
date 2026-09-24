@@ -19,11 +19,11 @@ const CertificationCard = ({ certification }) => {
   const shortDescription = certification.description.slice(0, 100);
 
   return (
-    <div className="rounded-2xl border border-cyan-400/20 bg-slate-900 p-5 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:shadow-cyan-400/10">
+    <div className="rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:shadow-cyan-400/10">
       {/* Logo, title and organization */}
       
       <div className="mb-4 flex items-start gap-3">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white p-2 shadow-md">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-950 p-2 shadow-md">
           <img
             src={certification.logo}
             alt={`${certification.organization} logo`}
@@ -32,7 +32,7 @@ const CertificationCard = ({ certification }) => {
         </div>
 
         <div className="min-w-0">
-          <h3 className="line-clamp-2 text-base font-semibold text-white sm:text-lg">
+          <h3 className="line-clamp-2 text-base font-semibold text-slate-50 sm:text-lg">
             {certification.title}
           </h3>
 
@@ -40,7 +40,7 @@ const CertificationCard = ({ certification }) => {
             {certification.organization}
           </p>
 
-          <p className="mt-1 text-xs text-gray-400">
+          <p className="mt-1 text-xs text-slate-500 dark:text-gray-400">
             {certification.date}
           </p>
         </div>
@@ -48,7 +48,7 @@ const CertificationCard = ({ certification }) => {
 
       {/* Description */}
       <div className="mb-4">
-        <p className="text-sm leading-6 text-gray-300">
+        <p className="text-sm leading-6 text-slate-600 dark:text-gray-300">
           {showFullDescription
             ? certification.description
             : `${shortDescription}...`}

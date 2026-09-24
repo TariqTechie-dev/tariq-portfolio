@@ -7,6 +7,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -20,35 +21,43 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const mailtoLink = `mailto:tariqhussain.webdev@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
+    const recipient = "tariqhussain.webdev@gmail.com";
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    )}`;
+    );
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
 
-    window.location.href = mailtoLink;
+    const composeWindow = window.open(gmailLink, "_blank", "noopener,noreferrer");
+
+    if (composeWindow) {
+      setSubmitMessage("Gmail compose window opened. Please send your message from there.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } else {
+      setSubmitMessage("Please allow pop-ups for this site to open the email composer.");
+    }
   };
 
   return (
     <section
       id="contact"
-      className="bg-slate-950 px-4 py-16 sm:px-6 lg:px-8"
+      className="bg-slate-950 px-4 py-16 text-slate-50 transition-colors duration-300 sm:px-6 lg:px-8"
     >
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center">
-        <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
+        <h2 className="text-center text-3xl font-bold text-slate-50 sm:text-4xl">
           Contact Me
         </h2>
 
-        <p className="mt-4 max-w-2xl text-center text-sm leading-7 text-gray-400 sm:text-base">
+        <p className="mt-4 max-w-2xl text-center text-sm leading-7 text-slate-400 sm:text-base">
           Feel free to reach out to me for any questions, opportunities, or
           collaboration.
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="mt-10 w-full max-w-2xl rounded-2xl border border-cyan-400/20 bg-slate-900 p-5 shadow-xl sm:p-8"
+          className="mt-10 w-full max-w-2xl rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-xl shadow-black/20 sm:p-8"
         >
-          <h3 className="mb-6 text-2xl font-semibold text-white">
+          <h3 className="mb-6 text-2xl font-semibold text-slate-50">
             Send Me a Message
           </h3>
 
@@ -60,7 +69,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-cyan-400"
+              className="rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-50 outline-none transition placeholder:text-slate-500 focus:border-cyan-400"
             />
 
             <input
@@ -70,7 +79,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-cyan-400"
+              className="rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-50 outline-none transition placeholder:text-slate-500 focus:border-cyan-400"
             />
           </div>
 
@@ -81,7 +90,7 @@ const Contact = () => {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="mt-4 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-cyan-400"
+            className="mt-4 w-full rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-50 outline-none transition placeholder:text-slate-500 focus:border-cyan-400"
           />
 
           <textarea
@@ -91,7 +100,7 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="mt-4 w-full resize-none rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-cyan-400"
+            className="mt-4 w-full resize-none rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-slate-50 outline-none transition placeholder:text-slate-500 focus:border-cyan-400"
           />
 
           <button
@@ -100,6 +109,12 @@ const Contact = () => {
           >
             Send Message
           </button>
+
+          {submitMessage && (
+            <p className="mt-4 text-center text-sm text-cyan-400" role="status">
+              {submitMessage}
+            </p>
+          )}
         </form>
       </div>
     </section>

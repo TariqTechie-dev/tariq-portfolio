@@ -13,7 +13,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="bg-slate-950 px-4 py-16 sm:px-6 lg:px-8"
+      className="bg-slate-950 px-4 py-16 text-slate-50 transition-colors duration-300 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
@@ -21,11 +21,11 @@ const Education = () => {
             My Academic Journey
           </p>
 
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
             Education
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
             My educational background and academic achievements.
           </p>
         </div>
@@ -33,7 +33,7 @@ const Education = () => {
         <Timeline
           sx={{
             p: 0,
-            // Right alignment secure karne ke liye
+
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -44,10 +44,10 @@ const Education = () => {
               key={educationItem.id}
               sx={{
                 "&::before": {
-                  display: "none", // Empty space remove karne ke liye
+                  display: "none",
                 },
                 width: "100%",
-                maxWidth: "800px", // Card container width match karne ke liye
+                maxWidth: "800px",
               }}
             >
               <TimelineContent sx={{ py: "12px", px: 2 }}>
@@ -63,7 +63,7 @@ const Education = () => {
                   }}
                 />
 
-                {/* Yahan se condition (index !== education.length - 1) hata di hai taake 3rd card ke sath bhi line bane */}
+
                 <TimelineConnector
                   sx={{
                     backgroundColor: "rgba(34, 211, 238, 0.4)",
