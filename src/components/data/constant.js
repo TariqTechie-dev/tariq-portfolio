@@ -8,6 +8,7 @@ const ghsspImage = "/assets/images/education/GHSSP.png";
 const luxeScentImage = "/assets/images/projects/luxe-scent.png";
 const wanderlustImage = "/assets/images/projects/wanderlust.png";
 const apnaCollegeLogo = "/assets/images/certifications/apna-college.png";
+const  banoQabilLogo = "/assets/images/certifications/bano-qabil.png";
 /* =========================================================
    1. BIO SECTION
 ========================================================= */
@@ -17,11 +18,14 @@ export const Bio = {
   roles: ["Programmer", "MERN Stack Developer", "Computer Science Student"],
 
   description:
-    "I'm a Computer Science student and aspiring Full-Stack Web Developer with a strong foundation in modern web development. I enjoy building practical web applications and learning how different technologies work together to solve real problems. My experience includes working with HTML, CSS, JavaScript, Tailwind CSS, Node.js, Express.js, EJS, MongoDB, and SQL. I have built projects such as Luxe Scent, a perfume e-commerce website, and I'm continuously improving my skills through hands-on development. I'm looking for opportunities where I can contribute, learn from experienced developers, and grow as a professional.",
+    "I am a solution-oriented MERN Stack Developer dedicated to building functional, high-impact web applications. Over the years, I’ve learned that while writing clean code is essential, truly understanding the problem is what delivers real value. I am a fast learner who thrives under pressure, adapts quickly to new tools, and collaborates effectively with mission-driven teams. I am looking for a challenging role where I can contribute to meaningful projects, expand my skill set, and build things that matter",
 
   github: "https://github.com/TariqTechie-dev",
 
-  resume: "",
+  resume:
+    "https://docs.google.com/document/d/1uRa9U5wH-c5HsN7BtcZUKSSp9xIDoYM-poFG4iqx-Ig/edit?usp=sharing",
+  resumeDownload:
+    "https://docs.google.com/document/d/1uRa9U5wH-c5HsN7BtcZUKSSp9xIDoYM-poFG4iqx-Ig/export?format=pdf",
 
   linkedin: "https://www.linkedin.com/in/tariq-hussain-65bbb3288",
 
@@ -71,7 +75,6 @@ export const skills = [
       },
     ],
   },
-
   {
     title: "Backend",
     skills: [
@@ -90,6 +93,10 @@ export const skills = [
         image:
           "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/ejs/default.svg",
       },
+      { name :"python",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+
+      }
     ],
   },
 
@@ -148,7 +155,7 @@ export const education = [
     id: 1,
     img: uomImage,
     school: "University of Malakand (UOM)",
-    date: "Sep 2021 - Sep 2026",
+    date: "Sep 2023 - Sep 2026",
     grade: "3.25 CGPA",
     desc: "Completed BS in Computer Science, built a strong foundation in programming, algorithms, data structures, and software engineering through coursework and practical projects.",
     degree: "Bachelor of Science in Computer Science",
@@ -238,6 +245,17 @@ export const certifications = [
     description:
       "Comprehensive full-stack web development program covering MERN stack, modern JavaScript, and industry best practices for building scalable web applications.",
     pdfUrl:
-      "https://drive.google.com/file/d/1u1E26Hpcyt0HkKt2atXFDw8YBi9_t4AK/view?usp=sharing",
+        "https://drive.google.com/file/d/1u1E26Hpcyt0HkKt2atXFDw8YBi9_t4AK/view?usp=sharing",
+      },
+      {
+    id: 2,
+    title: "E-Commerce",
+    organization: "Bano Qabil",
+    logo: banoQabilLogo,
+    date: "2024-2025",
+    description:
+      "Completed a 3-month professional certification in E-Commerce under Bano Qabil Batch 2024-2025. Gained practical insights into digital storefront strategies, electronic commerce ecosystems, and building production-ready marketplace layouts..",
+    pdfUrl:
+      "https://drive.google.com/file/d/19PyP_M7Xk3FYz4i-LcgpdJud0SVPIOU5/view?usp=drive_link",
   },
 ];
