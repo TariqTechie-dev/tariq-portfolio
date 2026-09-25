@@ -25,7 +25,7 @@ export const Bio = {
   resume:
     "https://docs.google.com/document/d/1uRa9U5wH-c5HsN7BtcZUKSSp9xIDoYM-poFG4iqx-Ig/edit?usp=sharing",
   resumeDownload:
-    "https://docs.google.com/document/d/1uRa9U5wH-c5HsN7BtcZUKSSp9xIDoYM-poFG4iqx-Ig/export?format=pdf",
+    "/assets/resume/Tariq-Hussain-Resume.pdf",
 
   linkedin: "https://www.linkedin.com/in/tariq-hussain-65bbb3288",
 
