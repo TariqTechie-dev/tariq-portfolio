@@ -274,7 +274,7 @@ const Navbar = () => {
               className={`group relative flex items-center justify-between px-6 py-4 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white ${focusRing}`}
             >
               <div className="flex items-center gap-4">
-                <span className="rounded-lg bg-slate-100 p-1.5 text-lg text-cyan-400 transition-colors group-hover:text-cyan-300 dark:bg-slate-900">
+                <span className="rounded-lg border border-slate-300 bg-slate-200 p-1.5 text-lg text-cyan-700 transition-colors group-hover:bg-slate-300 dark:border-transparent dark:bg-slate-900 dark:text-cyan-400 dark:group-hover:bg-slate-800 dark:group-hover:text-cyan-300">
                   {item.icon}
                 </span>
                 <span className="text-sm font-medium">{item.name}</span>
