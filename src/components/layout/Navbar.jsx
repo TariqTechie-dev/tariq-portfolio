@@ -244,7 +244,7 @@ const Navbar = () => {
               <img
                 src="/logo2.png"
                 alt="Tariq Hussain"
-                className="h-full w-full rounded-full object-contain"
+                className="h-full w-full rounded-full object-contain brightness-0 dark:brightness-100"
               />
             </div>
 
