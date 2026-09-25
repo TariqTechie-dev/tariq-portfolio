@@ -215,7 +215,7 @@ const Navbar = () => {
         aria-label="Mobile navigation"
         aria-hidden={!nav}
         inert={!nav}
-        className={`fixed top-0 right-0 bottom-0 z-50 flex h-screen w-[min(290px,calc(100vw-24px))] touch-pan-y select-none flex-col border-l border-slate-800 bg-slate-950 transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 bottom-0 z-50 flex h-screen w-[min(290px,calc(100vw-24px))] touch-pan-y select-none flex-col border-l border-slate-200 bg-white text-slate-900 shadow-2xl shadow-black/20 transition-transform duration-300 ease-in-out dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 dark:shadow-black/40 md:hidden ${
           nav ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -274,7 +274,7 @@ const Navbar = () => {
               className={`group relative flex items-center justify-between px-6 py-4 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white ${focusRing}`}
             >
               <div className="flex items-center gap-4">
-                <span className="rounded-lg bg-slate-900 p-1.5 text-lg text-cyan-400 transition-colors group-hover:text-cyan-300">
+                <span className="rounded-lg bg-slate-100 p-1.5 text-lg text-cyan-400 transition-colors group-hover:text-cyan-300 dark:bg-slate-900">
                   {item.icon}
                 </span>
                 <span className="text-sm font-medium">{item.name}</span>
