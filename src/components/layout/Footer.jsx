@@ -3,7 +3,6 @@ import {
     GitHub,
     Instagram,
     LinkedIn,
-    Twitter,
 } from "@mui/icons-material";
 
 
@@ -79,15 +78,6 @@ const Footer = () => {
                             className="transition hover:-translate-y-0.5 hover:text-cyan-300"
                         >
                             <Instagram />
-                        </a>
-
-                        <a
-                            href="#"
-                            onClick={(event) => event.preventDefault()}
-                            aria-label="Twitter"
-                            className="transition hover:-translate-y-0.5 hover:text-cyan-300"
-                        >
-                            <Twitter />
                         </a>
 
                         <a
