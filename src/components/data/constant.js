@@ -12,8 +12,7 @@ export const Bio = {
   description:
     "I am a solution-oriented MERN Stack Developer who builds functional, high-impact web applications. I believe clean code matters most when it solves a real problem for people. I learn quickly, adapt to new tools, and collaborate well with mission-driven teams. I am open to full-time and freelance opportunities where I can contribute, grow, and build things that matter.",
   github: "https://github.com/TariqTechie-dev",
-  resume:
-    "https://docs.google.com/document/d/1uRa9U5wH-c5HsN7BtcZUKSSp9xIDoYM-poFG4iqx-Ig/edit?usp=sharing",
+  resume: "/assets/resume/Tariq-Hussain-Resume.pdf",
   resumeDownload: "/assets/resume/Tariq-Hussain-Resume.pdf",
   linkedin: "https://www.linkedin.com/in/tariq-hussain-65bbb3288",
   insta: "https://www.instagram.com/tariqdevo/",
