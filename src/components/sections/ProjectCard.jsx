@@ -9,19 +9,23 @@ const Avatar = ({ src }) => (
 
 const ProjectCard = ({ project, setOpenModal }) => {
   return (
-    <div
+    <button
+      type="button"
       onClick={() =>
         setOpenModal({
           state: true,
           project: project,
         })
       }
-      className="group h-[490px] w-full max-w-[330px] cursor-pointer overflow-hidden rounded-[10px] border border-slate-800 bg-slate-900 px-5 py-[26px] shadow-lg shadow-black/20 transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-400/10"
+      aria-label={`View details for ${project.title}`}
+      className="group h-[490px] w-full max-w-[330px] cursor-pointer overflow-hidden rounded-[10px] border border-slate-800 bg-slate-900 px-5 py-[26px] text-left shadow-lg shadow-black/20 transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
     >
       {/* Project Image */}
       <img
         src={project.image}
         alt={project.title}
+        loading="lazy"
+        decoding="async"
         className="h-[180px] w-full rounded-[10px] bg-slate-950 object-cover shadow-md"
       />
 
@@ -58,7 +62,7 @@ const ProjectCard = ({ project, setOpenModal }) => {
           <Avatar key={index} src={member.img} />
         ))}
       </div>
-    </div>
+    </button>
   );
 };
 
