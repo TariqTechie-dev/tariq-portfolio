@@ -6,6 +6,8 @@ const EducationCard = ({ education }) => {
           <img
             src={education.img}
             alt={education.school}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-contain"
           />
         </div>
