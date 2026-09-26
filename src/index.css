@@ -23,8 +23,8 @@ body,
 
 html {
 	scroll-behavior: smooth;
-	-webkit-text-size-adjust: 100%; /* Purane webkit browsers ke liye */
-	text-size-adjust: 100%;         /* Modern Chrome, Edge, aur Safari ke liye */
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 html,
@@ -93,6 +93,7 @@ body {
 
 section {
 	position: relative;
+	scroll-margin-top: 5rem;
 }
 
 img {
@@ -213,7 +214,7 @@ html:not(.dark) body {
 }
 
 html:not(.dark) .bg-slate-950 {
-	background-color: transparent !important;
+	background-color: #f8fafc !important;
 }
 
 html:not(.dark) .bg-slate-900 {
