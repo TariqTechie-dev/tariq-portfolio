@@ -58,6 +58,10 @@ const Hero = () => {
             {Bio.description}
           </p>
 
+          <p className="mb-6 text-sm font-medium text-cyan-400 sm:text-base">
+            Based in Pakistan and available for remote opportunities.
+          </p>
+
           {/* Resume Action Buttons */}
           <div className="flex w-full max-w-sm flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:justify-start">
             <a
