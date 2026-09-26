@@ -27,6 +27,8 @@ const CertificationCard = ({ certification }) => {
           <img
             src={certification.logo}
             alt={`${certification.organization} logo`}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full rounded-full object-contain"
           />
         </div>
