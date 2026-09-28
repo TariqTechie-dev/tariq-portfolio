@@ -67,7 +67,7 @@ export const education = [
 
 export const projects = [
   { id: 1, title: "Luxe Scents", date: "2025 - 2026", description: "Luxe Scents is a full-stack web-based perfume e-commerce platform built with Node.js, Express.js, MongoDB, Mongoose, and EJS. The platform allows customers to browse perfumes, manage their cart and wishlist, place orders, and submit product reviews. It also provides an admin dashboard for managing products, orders, customers, and analytics.", image: luxeScentImage, tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "EJS", "Node.js", "Express.js", "MongoDB"], category: "web app", github: "https://github.com/TariqTechie-dev/luxe-scents", webapp: "https://luxe-scents.onrender.com" },
-  { id: 2, title: "WanderLust", date: "2025", description: "A full-stack Airbnb-style travel listing platform with authentication, reviews, image uploads, and MongoDB session storage.", image: wanderlustImage, tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "EJS", "Node.js", "Express.js", "MongoDB"], category: "web app", github: "https://github.com/TariqTechie-dev/WanderLust", webapp: "https://wanderlust-1iua.onrender.com/" },
+  { id: 2, title: "StayNorth", date: "2025", description: "A full-stack Airbnb-style travel listing platform with authentication, reviews, image uploads, and MongoDB session storage.", image: wanderlustImage, tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "EJS", "Node.js", "Express.js", "MongoDB"], category: "web app", github: " https://github.com/TariqTechie-dev/StayNorth", webapp: "https://wanderlust-1iua.onrender.com/" },
 ];
 
 export const certifications = [
