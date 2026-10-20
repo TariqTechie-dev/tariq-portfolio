@@ -5,6 +5,7 @@ const luxeScentImage = "/assets/images/projects/luxe-scent.png";
 const wanderlustImage = "/assets/images/projects/wanderlust.png";
 const apnaCollegeLogo = "/assets/images/certifications/apna-college.png";
 const banoQabilLogo = "/assets/images/certifications/bano-qabil.png";
+const microsoftLogo = "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg";
 
 export const Bio = {
   name: "Tariq Hussain",
@@ -73,4 +74,6 @@ export const projects = [
 export const certifications = [
   { id: 1, title: "Fullstack Web Development", organization: "Apna College", logo: apnaCollegeLogo, date: "Issued Jan 2025", description: "Comprehensive full-stack web development program covering MERN stack, modern JavaScript, and industry best practices for building scalable web applications.", pdfUrl: "https://drive.google.com/file/d/1u1E26Hpcyt0HkKt2atXFDw8YBi9_t4AK/view?usp=sharing" },
   { id: 2, title: "E-Commerce", organization: "Bano Qabil", logo: banoQabilLogo, date: "2024-2025", description: "Completed a 3-month professional certification in E-Commerce under Bano Qabil Batch 2024-2025. Gained practical insights into digital storefront strategies, electronic commerce ecosystems, and building production-ready marketplace layouts.", pdfUrl: "https://drive.google.com/file/d/19PyP_M7Xk3FYz4i-LcgpdJud0SVPIOU5/view?usp=drive_link" },
+  { id: 3, title: "Green Skills Passport", organization: "EY and Microsoft", logo: microsoftLogo, date: "Issued Oct 2026", description: "Completed the EY and Microsoft Green Skills Passport, covering sustainability fundamentals, the green economy, and the skills and careers shaping a sustainable future.", pdfUrl: "https://drive.google.com/file/d/1AyYSj0vKlOVA1agpVtHv-V2PB-CaLxkn/view?usp=sharing" },
+  { id: 4, title: "Intersection of AI and Environmental Sustainability", organization: "EY and Microsoft", logo: microsoftLogo, date: "Issued Oct 2026", description: "Completed the EY and Microsoft course on the intersection of AI and environmental sustainability, covering how AI can help solve environmental challenges and how to use it responsibly with its own footprint in mind.", pdfUrl: "https://drive.google.com/file/d/1TODHzJLKDvfTV7A-IqpWSvKhbYKyW73c/view?usp=sharing" },
 ];
